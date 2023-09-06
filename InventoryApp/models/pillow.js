@@ -11,12 +11,11 @@ const PillowSchema = new Schema({
   },
   stock: { type: Number, required: true, minLength: 0 },
   description: { type: String },
-  material: { type: String, required: true },
   price: { type: Number, required: [true, "Price is required"], min: 0 },
 });
 
 PillowSchema.virtual("url").get(function () {
-  return `/catalog/pillow/${this.id}`;
+  return `/catalog/pillow/${this._id}`;
 });
 
 module.exports = mongoose.model("Pillow", PillowSchema);

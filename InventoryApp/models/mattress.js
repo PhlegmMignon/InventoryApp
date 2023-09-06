@@ -24,7 +24,7 @@ const MattressSchema = new Schema({
 });
 
 MattressSchema.virtual("url").get(function () {
-  return `/catalog/mattress/${this.id}`;
+  return `/catalog/mattress/${this._id}`;
 });
 
 module.exports = mongoose.model("Mattress", MattressSchema);

@@ -17,7 +17,7 @@ const PillowcaseSchema = new Schema({
 });
 
 PillowcaseSchema.virtual("url").get(function () {
-  return `/catalog/pillowcase/${this.id}`;
+  return `/catalog/pillowcase/${this._id}`;
 });
 
 module.exports = mongoose.model("Pillowcase", PillowcaseSchema);

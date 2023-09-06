@@ -24,7 +24,7 @@ const BedsheetSchema = new Schema({
 });
 
 BedsheetSchema.virtual("url").get(function () {
-  return `/catalog/bedsheet/${this.id}`;
+  return `/catalog/bedsheet/${this._id}`;
 });
 
 module.exports = mongoose.model("Bedsheet", BedsheetSchema);

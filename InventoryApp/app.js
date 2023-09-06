@@ -10,8 +10,11 @@ var usersRouter = require("./routes/users");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
+//First l might be an i
+const mongoDB =
+  "mongodb+srv://dmahS:8pHEXTxWK9lcPoLi@cluster0.zqxojhy.mongodb.net/?retryWrites=true&w=majority";
+
 //Wait for DB to connect. Logs error if problem
-const mongoDB = "mongodb://127.0.0.1/my_databse";
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(mongoDB);
