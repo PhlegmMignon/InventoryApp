@@ -61,7 +61,7 @@ async function pillowcaseCreate(index, name, stock, description, price) {
 
   await pillowcase.save();
   pillowcases[index] = pillowcase;
-  console.log(`Added pillowcase: ${first_name} ${family_name}`);
+  console.log(`Added pillowcase: ${name}`);
 }
 
 async function mattressCreate(index, name, stock, description, price, size) {
@@ -74,7 +74,7 @@ async function mattressCreate(index, name, stock, description, price, size) {
   });
   await mattress.save();
   mattresses[index] = mattress;
-  console.log(`Added mattress: ${title}`);
+  console.log(`Added mattress: ${name}`);
 }
 
 async function bedsheetCreate(index, name, stock, description, price, size) {
@@ -87,7 +87,7 @@ async function bedsheetCreate(index, name, stock, description, price, size) {
   });
   await bedsheet.save();
   bedsheet[index] = bedsheet;
-  console.log(`Added bedsheet: ${imprint}`);
+  console.log(`Added bedsheet: ${name}`);
 }
 
 async function createPillows() {
@@ -100,7 +100,7 @@ async function createPillows() {
 }
 
 async function createPillowcases() {
-  console.log("Adding pillocase");
+  console.log("Adding pillowcase");
   await Promise.all([
     pillowcaseCreate(
       0,
