@@ -12,7 +12,6 @@ const MattressSchema = new Schema({
   stock: { type: Number, required: true, minLength: 0 },
 
   description: { type: String },
-  material: { type: String, required: true },
   size: {
     type: String,
     enum: ["Twin, Full, Queen, King, Cali King"],

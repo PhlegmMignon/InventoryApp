@@ -12,7 +12,6 @@ const PillowcaseSchema = new Schema({
   stock: { type: Number, required: true, minLength: 0 },
 
   description: { type: String },
-  material: { type: String, required: true },
   price: { type: Number, required: [true, "Price is required"], min: 0 },
 });
 
