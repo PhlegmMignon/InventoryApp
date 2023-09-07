@@ -14,7 +14,7 @@ const BedsheetSchema = new Schema({
   description: { type: String },
   size: {
     type: String,
-    enum: ["Twin, Full, Queen, King, Cali King"],
+    enum: ["Twin", "Full", "Queen", "King", "Cali" "King"],
     required: [true, "Size is required"],
     minLength: 3,
     maxLength: 15,
