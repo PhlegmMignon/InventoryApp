@@ -30,8 +30,8 @@ async function main() {
   console.log("Debug: Should be connected?");
   await createPillows();
   await createPillowcases();
-  await createMattress();
-  await createBedsheet();
+  await createMattresses();
+  await createBedsheets();
   console.log("Debug: Closing mongoose");
   mongoose.connection.close();
 }
