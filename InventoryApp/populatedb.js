@@ -29,7 +29,7 @@ async function main() {
   await mongoose.connect(mongoDB);
   console.log("Debug: Should be connected?");
   await createPillows();
-  await createPillowcase();
+  await createPillowcases();
   await createMattress();
   await createBedsheet();
   console.log("Debug: Closing mongoose");
