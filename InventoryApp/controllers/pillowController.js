@@ -1,6 +1,10 @@
 const Pillow = require("../models/pillow");
 const asyncHandler = require("express-async-handler");
 
+exports.index = asyncHandler(async (req, res, next) => {
+  res.send("WIP site home page");
+});
+
 //Displays list of all pillows
 exports.pillow_list = asyncHandler(async (req, res, next) => {
   res.send("Not implemented: pillow list");
