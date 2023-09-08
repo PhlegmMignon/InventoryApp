@@ -5,9 +5,11 @@
   "scripts": {
     "start": "node ./bin/www",
     "devStart": "nodemon ./bin/www",
-    "serverStart": "DEBUG=InventoryApp:* npm run devStart"
+    "serverStart": "DEBUG=InventoryApp:* npm run devStart",
+    "build:css": "postcss ./public/stylesheets/tailwind.css -o ./public/stylesheets/output.css --watch"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.15",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "^4.18.2",
@@ -19,6 +21,8 @@
     "mongoose": "^7.5.0",
     "morgan": "~1.9.1",
     "node": "^20.5.1",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {

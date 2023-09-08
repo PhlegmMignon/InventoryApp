@@ -1,8 +1,25 @@
 const Pillow = require("../models/pillow");
+const Pillowcase = require("../models/pillowcase");
+const Bedsheet = require("../models/bedsheet");
+const Mattress = require("../models/mattress");
 const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
-  res.send("WIP site home page");
+  const [numPillows, numPillowcases, numBedsheets, numMattresses] =
+    await Promise.all([
+      Pillow.countDocuments({}).exec(),
+      Pillowcase.countDocuments({}).exec(),
+      Bedsheet.countDocuments({}).exec(),
+      Mattress.countDocuments({}).exec(),
+    ]);
+
+  res.render("index", {
+    title: "Drowsy shop",
+    pillow_count: numPillows,
+    pillowcase_count: numPillowcases,
+    bedsheets_count: numBedsheets,
+    mattress_count: numMattresses,
+  });
 });
 
 //Displays list of all pillows
